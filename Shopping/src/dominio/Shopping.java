@@ -113,7 +113,25 @@ public class Shopping {
         }
         return loja;
      } */
-
+     public Informatica lojaSeguroMaisCaro() {
+        Informatica lojaMaisCara = null;
+        double valorSeguroMaisAlto = 0.0;
+    
+        for (Loja loja : lojas) {
+            if (loja instanceof Informatica) {
+                Informatica informatica = (Informatica) loja;
+                double valorSeguro = informatica.getSeguroEletronicos();
+    
+                if (valorSeguro > valorSeguroMaisAlto) {
+                    valorSeguroMaisAlto = valorSeguro;
+                    lojaMaisCara = informatica;
+                }
+            }
+        }
+    
+        return lojaMaisCara;
+    }
+    
 
 
 }
