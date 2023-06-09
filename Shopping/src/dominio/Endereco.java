@@ -73,6 +73,11 @@ public class Endereco {
         return this.complemento;
     }
 
+    @Override
+    public String toString(){
+        return " CEP " + this.cep+   this.nomeDaRua + "," + this.numero + "," + this.complemento + "," + this.cidade + "-" + this.estado + "," + this.pais;
+    }
+
 
 }
 

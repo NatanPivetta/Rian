@@ -73,5 +73,10 @@ public class Data {
     }
 
 
+    @Override
+    public String toString(){
+        return this.dia+"/"+this.mes+"/"+this.ano;
+    }
+
 
 }
