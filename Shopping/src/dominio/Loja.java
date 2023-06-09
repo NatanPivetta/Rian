@@ -102,19 +102,24 @@ public class Loja {
     }
     
     public Produto[] getEstoqueProdutos() {
-        
         return estoqueProdutos;
     }
 
     public void imprimeProdutos(){
-        System.out.println(estoqueProdutos);
+        if(this.estoqueProdutos.length>0){
+            for(int i=0; i<=estoqueProdutos.length;i++){
+            System.out.println(this.estoqueProdutos[i].getNome());
+        }
+        }
+        
+        
     }
 
     public boolean insereProduto(Produto prod){
         boolean b = false;
-        if(estoqueProdutos.length < max){
-            for(int i=0;i<estoqueProdutos.length; i++){
-                estoqueProdutos[i] = prod;
+        if(this.estoqueProdutos.length < max){
+            for(int i=0;i<this.estoqueProdutos.length; i++){
+                this.estoqueProdutos[i] = prod;
                 b = true;
             }
             
@@ -130,9 +135,9 @@ public class Loja {
     public boolean removeProduto(String prod){
         boolean b = false;
         
-            for(int i=0; i<estoqueProdutos.length; i++){
-                if(estoqueProdutos[i].getNome() == prod){
-                    estoqueProdutos[i] = null;
+            for(int i=0; i<this.estoqueProdutos.length; i++){
+                if(this.estoqueProdutos[i].getNome() == prod){
+                    this.estoqueProdutos[i] = null;
                 }else{
                 System.out.println("Produto não encontrado");
                 b = false;

@@ -13,7 +13,7 @@ public class Shopping {
         this.endereco = end;
         this.max = max;
     }
-
+    
     public String getNome() {
         return nome;
     }
@@ -26,12 +26,12 @@ public class Shopping {
         return endereco;
     }
 
-    public Loja[] getLojas(){
-        return lojas;
-    }
-
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    public Loja[] getLojas(){
+        return lojas;
     }
 
     public boolean insereLoja(Loja loja){
@@ -117,3 +117,5 @@ public class Shopping {
 
 
 }
+
+
